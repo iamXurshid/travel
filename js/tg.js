@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
   const to = document.getElementById('to-place').value;
   const dateStart = document.getElementById('date-start').value;
   const dateEnd = document.getElementById('date-end').value;
-  
+
   // Ensure correct targeting of select elements
   const classType = document.querySelector('select[name="class"]')?.value;
   const adults = document.querySelector('select[name="adults"]')?.value;
@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
 
   var token = '7962698280:AAHZ9lCx_uGR9HPdBWHru49y85ibfh9es0Y';
   var chatid = -1002421782732;
-  var url = `http://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&text=${myText}&parse_mode=html`;
+  var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&text=${myText}&parse_mode=html`;
 
   let api = new XMLHttpRequest();
   api.open('GET', url, true);
