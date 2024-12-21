@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
   const to = document.getElementById('to-place').value;
   const dateStart = document.getElementById('date-start').value;
   const dateEnd = document.getElementById('date-end').value;
-
+  
   // Ensure correct targeting of select elements
   const classType = document.querySelector('select[name="class"]')?.value;
   const adults = document.querySelector('select[name="adults"]')?.value;
@@ -22,29 +22,21 @@ form.addEventListener('submit', (e) => {
 
   var token = '7962698280:AAHZ9lCx_uGR9HPdBWHru49y85ibfh9es0Y';
   var chatid = -1002421782732;
+  var url = `http://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&text=${myText}&parse_mode=html`;
 
-  // CORS proxy URL (CORS Anywhere service)
-  const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-  const telegramUrl = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&text=${myText}&parse_mode=html`;
+  let api = new XMLHttpRequest();
+  api.open('GET', url, true);
 
-  // Send the request using Fetch API with the proxy URL
-  fetch(proxyUrl + telegramUrl, {
-    method: 'GET',
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+  // Sending the request and handling the response
+  api.onreadystatechange = function () {
+    if (api.readyState === XMLHttpRequest.DONE) {
+      if (api.status === 200) {
+        console.log("Message sent successfully!");
+      } else {
+        console.error("Error sending message: " + myText);
+      }
     }
-    return response.json();
-  })
-  .then(data => {
-    if (data.ok) {
-      console.log("Message sent successfully!");
-    } else {
-      console.error("Error sending message: ", data.description);
-    }
-  })
-  .catch(error => {
-    console.error("Error:", error);
-  });
+  };
+
+  api.send();
 });
