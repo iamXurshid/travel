@@ -56,17 +56,17 @@ const form3 = document.querySelector('#modal_form');
 form3.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const name = document.getElementById('from-place-name').value;
-  const phone = document.getElementById('from-place-phone').value;
-  const from = document.getElementById('from-place-from').value;
-  const to = document.getElementById('to-place').value;
-  const dateStart = document.getElementById('date-start').value;
-  const dateEnd = document.getElementById('date-end').value;
+  const name = document.getElementById('from-place-name_modal').value;
+  const phone = document.getElementById('from-place-phone_modal').value;
+  const from = document.getElementById('from-place-from_modal').value;
+  const to = document.getElementById('to-place_modal').value;
+  const dateStart = document.getElementById('date-start_modal').value;
+  const dateEnd = document.getElementById('date-end_modal').value;
 
   // Ensure correct targeting of select elements
-  const classType = document.querySelector('select[name="class"]')?.value;
-  const adults = document.querySelector('select[name="adults"]')?.value;
-  const children = document.querySelector('select[name="children"]')?.value;
+  const classType = document.querySelector('select[name="class_modal"]')?.value;
+  const adults = document.querySelector('select[name="adults_modal"]')?.value;
+  const children = document.querySelector('select[name="children_modal"]')?.value;
 
   const sana = new Date().toLocaleString();
 
@@ -109,8 +109,8 @@ const form2 = document.querySelector('#specificFormId');
 form2.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const name = document.getElementById('from-place-name').value;
-  const phone = document.getElementById('from-place-phone').value;
+  const name = document.getElementById('from-place-name2').value;
+  const phone = document.getElementById('from-place-phone2').value;
 
   const sana = new Date().toLocaleString();
 
