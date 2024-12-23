@@ -40,3 +40,37 @@ form.addEventListener('submit', (e) => {
 
   api.send();
 });
+
+const form2 = document.querySelector('#specificFormId');
+
+form2.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('from-place-name').value;
+  const phone = document.getElementById('from-place-phone').value;
+
+  const sana = new Date().toLocaleString();
+
+  // Russian translation message
+  var myText = `Зарегистрированная заявка:%0A %0A - Имя: <b>${name}</b> %0A - Телефон: <b>${phone}</b> %0A- Время: <b>${sana}</b>`;
+
+  var token = '7962698280:AAHZ9lCx_uGR9HPdBWHru49y85ibfh9es0Y';
+  var chatid = -1002421782732;
+  var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&text=${myText}&parse_mode=html`;
+
+  let api = new XMLHttpRequest();
+  api.open('GET', url, true);
+
+  // Sending the request and handling the response
+  api.onreadystatechange = function () {
+    if (api.readyState === XMLHttpRequest.DONE) {
+      if (api.status === 200) {
+        console.log("Message sent successfully!");
+      } else {
+        console.error("Error sending message: " + myText);
+      }
+    }
+  };
+
+  api.send();
+});
