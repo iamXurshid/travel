@@ -22,7 +22,8 @@
 	<link rel="shortcut icon" href="./images/header_logo.svg">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	
+	<!-- Toast.css -->
+	<link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -95,13 +96,13 @@
                                             <form class="row">
                                                 <div class="col-sm-12 mt">
                                                     <div class="input-field">
-                                                        <label for="from">Ваше имя</label>
+                                                        <label for="from">Имя</label>
                                                         <input type="text" class="form-control" id="from-place-name" placeholder="*Имя"/>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 mt">
                                                     <div class="input-field">
-                                                        <label for="from">Ваш номер телефона</label>
+                                                        <label for="from">Номер телефона</label>
                                                         <input type="text" class="form-control" id="from-place-phone" placeholder="*Телефон"/>
                                                     </div>
                                                 </div>
@@ -199,8 +200,36 @@
                 </div>
             </div>
         </div>
-          
-		
+
+        <div style="margin-top: 100px; margin-bottom: 100px;" class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                    <h3>Оставьте свои данные</h3>
+                    <p>Уважаемый клиент, благодарим вас за обращение к нам. Мы свяжемся с вами как можно скорее на основе предоставленных вами данных. Ответим на все ваши вопросы подробно и предоставим услуги, учитывая ваши требования. Спасибо за ваше доверие!</p>
+                </div>
+            </div>
+        
+            <form id="specificFormId" class="row">
+                <div class="col-md-4 col-sm-6" data-animate-effect="fadeIn">
+                    <div class="input-field">
+                        <label for="from">Имя</label>
+                        <input type="text" class="form-control" id="from-place-name" placeholder="*Имя"/>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-animate-effect="fadeIn">
+                    <div class="input-field">
+                        <label for="from">Номер телефона</label>
+                        <input type="text" class="form-control" id="from-place-phone" placeholder="*Номер телефона"/>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-animate-effect="fadeIn">
+                    <div class="col-xs-12">
+                        <input style="margin-top: 28px;" type="submit" class="btn btn-primary btn-block" value="Оставить заявку">
+                    </div>
+                </div>
+            </form>
+        </div>   
+
 		<div id="fh5co-tours" class="fh5co-section-gray">
             <div class="container">
                 <div class="row">
@@ -217,7 +246,7 @@
                                 <h3>Турецкая Ривьера</h3>
                                 <span>7 ночей - авиабилет и 5* отель</span>
                                 <span class="price">834$</span>
-                                <a class="btn btn-primary btn-outline" href="https://t.me/Da_Lisiy">Заказать сейчас <i class="icon-arrow-right22"></i></a>
+                                <button data-toggle="modal" data-target="#bookingModal" class="btn btn-primary btn-outline">Заказать сейчас <i class="icon-arrow-right22"></i></button>
                             </div>
                         </div>
                     </div>
@@ -228,7 +257,7 @@
                                 <h3>Каппадокия</h3>
                                 <span>6 ночей - авиабилет и 5* отель</span>
                                 <span class="price">483$</span>
-                                <a class="btn btn-primary btn-outline" href="https://t.me/Da_Lisiy">Заказать сейчас <i class="icon-arrow-right22"></i></a>
+                                <button data-toggle="modal" data-target="#bookingModal" class="btn btn-primary btn-outline">Заказать сейчас <i class="icon-arrow-right22"></i></button>
                             </div>
                         </div>
                     </div>
@@ -239,7 +268,7 @@
                                 <h3>Баку</h3>
                                 <span>6 ночей - авиабилет и 5* отель</span>
                                 <span class="price">574$</span>
-                                <a class="btn btn-primary btn-outline" href="https://t.me/Da_Lisiy">Заказать сейчас <i class="icon-arrow-right22"></i></a>
+                                <button data-toggle="modal" data-target="#bookingModal" class="btn btn-primary btn-outline">Заказать сейчас <i class="icon-arrow-right22"></i></button>
                             </div>
                         </div>
                     </div>
@@ -342,28 +371,28 @@
                     <div class="col-md-12">
                         <ul id="fh5co-destination-list" class="animate-box">
                             <li class="one-forth text-center" style="background-image: url('./images/usa.jpg'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Америка</h2>
                                     </div>
                                 </a>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Gankong.jpg'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Гонконг</h2>
                                     </div>
                                 </a>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Italiya.jpg'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Италия</h2>
                                     </div>
                                 </a>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Filippin.webp'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Филиппины</h2>
                                     </div>
@@ -371,7 +400,7 @@
                             </li>
         
                             <li class="one-forth text-center" style="background-image: url('./images/Yaponiya.avif'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Япония</h2>
                                     </div>
@@ -381,40 +410,40 @@
                                 <div class="title-bg">
                                     <div class="case-studies-summary">
                                         <h2>Самые Популярные Направления</h2>
-                                        <span><a href="https://t.me/travels_o_k">Посмотреть все направления</a></span>
+                                        <span><a href="#" data-toggle="modal" data-target="#bookingModal">Посмотреть все направления</a></span>
                                     </div>
                                 </div>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Parij.jpg'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Париж</h2>
                                     </div>
                                 </a>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Singapur.webp'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Сингапур</h2>
                                     </div>
                                 </a>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Turkiya.jpg'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Турция</h2>
                                     </div>
                                 </a>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Egypt.jpg'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Египет</h2>
                                     </div>
                                 </a>
                             </li>
                             <li class="one-forth text-center" style="background-image: url('./images/Dubay.jpeg'); ">
-                                <a href="https://t.me/travels_o_k">
+                                <a href="#" data-toggle="modal" data-target="#bookingModal">
                                     <div class="case-studies-summary">
                                         <h2>Дубай</h2>
                                     </div>
@@ -424,36 +453,110 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
 
-        <div style="margin-top: 100px; margin-bottom: 100px;" class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                    <h3>Оставьте свои данные</h3>
-                    <p>Уважаемый клиент, благодарим вас за обращение к нам. Мы свяжемся с вами как можно скорее на основе предоставленных вами данных. Ответим на все ваши вопросы подробно и предоставим услуги, учитывая ваши требования. Спасибо за ваше доверие!</p>
+        <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Form -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="flights">
+                               <form class="row" id="modal_form">
+                                   <div class="col-sm-12 mt">
+                                       <div class="input-field">
+                                           <label for="from">Имя</label>
+                                           <input type="text" class="form-control" id="from-place-name" placeholder="*Имя"/>
+                                       </div>
+                                   </div>
+                                   <div class="col-sm-12 mt">
+                                       <div class="input-field">
+                                           <label for="from">Номер телефона</label>
+                                           <input type="text" class="form-control" id="from-place-phone" placeholder="*Ваш номер телефона"/>
+                                       </div>
+                                   </div>
+                                   <div class="col-xxs-12 col-xs-6 mt">
+                                       <div class="input-field">
+                                           <label for="from">Откуда:</label>
+                                           <input type="text" class="form-control" id="from-place-from" placeholder="Ташкент"/>
+                                       </div>
+                                   </div>
+                                   <div class="col-xxs-12 col-xs-6 mt">
+                                       <div class="input-field">
+                                           <label for="from">Куда:</label>
+                                           <input type="text" class="form-control" id="to-place" placeholder="Турция"/>
+                                       </div>
+                                   </div>
+                                   <div class="col-xxs-12 col-xs-6 mt alternate">
+                                       <div class="input-field">
+                                           <label for="date-start">Дата вылета:</label>
+                                           <input type="text" class="form-control" id="date-start" placeholder="dd/mm/yyyy"/>
+                                       </div>
+                                   </div>
+                                   <div class="col-xxs-12 col-xs-6 mt alternate">
+                                       <div class="input-field">
+                                           <label for="date-end">Дата возвращения:</label>
+                                           <input type="text" class="form-control" id="date-end" placeholder="dd/mm/yyyy"/>
+                                       </div>
+                                   </div>
+                                   <div class="col-sm-12 mt">
+                                       <section>
+                                           <label for="class">Класс:</label>
+                                           <select name="class" class="cs-select cs-skin-border">
+                                               <option value="ekonom">Эконом</option>
+                                               <option value="birinchi">Первый</option>
+                                               <option value="biznes">Бизнес</option>
+                                           </select>
+                                       </section>
+                                   </div>
+                                   <div class="col-xxs-12 col-xs-6 mt">
+                                       <section>
+                                           <label for="class">Взрослые (12+)</label>
+                                           <select name="adults" class="cs-select cs-skin-border">
+                                               <option value="1">1</option>
+                                               <option value="2">2</option>
+                                               <option value="3">3</option>
+                                               <option value="4">4</option>
+                                               <option value="5">5</option>
+                                               <option value="6">6</option>
+                                               <option value="7">7</option>
+                                               <option value="8">8</option>
+                                               <option value="9">9</option>
+                                               <option value="10">10</option>
+                                               <option value="11">11</option>
+                                               <option value="12">12</option>
+                                           </select>
+                                       </section>
+                                   </div>
+                                   <div class="col-xxs-12 col-xs-6 mt">
+                                       <section>
+                                           <label for="class">Дети (2-11)</label>
+                                           <select name="children" class="cs-select cs-skin-border">
+                                               <option value="1">1</option>
+                                               <option value="2">2</option>
+                                               <option value="3">3</option>
+                                               <option value="4">4</option>
+                                               <option value="5">5</option>
+                                               <option value="6">6</option>
+                                               <option value="7">7</option>
+                                               <option value="8">8</option>
+                                               <option value="9">9</option>
+                                               <option value="10">10</option>
+                                               <option value="11">11</option>
+                                               <option value="12">12</option>
+                                           </select>
+                                       </section>
+                                   </div>
+                                   <div class="col-xs-12">
+                                       <input type="submit" class="btn btn-primary btn-block" value="Отправить заказ">
+                                   </div>
+                               </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        
-            <form id="specificFormId" class="row">
-                <div class="col-md-4 col-sm-6" data-animate-effect="fadeIn">
-                    <div class="input-field">
-                        <label for="from">Ваше имя</label>
-                        <input type="text" class="form-control" id="from-place-name" placeholder="*Имя"/>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6" data-animate-effect="fadeIn">
-                    <div class="input-field">
-                        <label for="from">Ваш номер телефона</label>
-                        <input type="text" class="form-control" id="from-place-phone" placeholder="*Номер телефона"/>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6" data-animate-effect="fadeIn">
-                    <div class="col-xs-12">
-                        <input style="margin-top: 28px;" type="submit" class="btn btn-primary btn-block" value="Оставить заявку">
-                    </div>
-                </div>
-            </form>
-        </div>        
+        </div>
 
 		<!-- fh5co-blog-section -->
         <div id="fh5co-testimonial" style="background-image:url(images/img_bg_1.jpg);">
@@ -581,7 +684,8 @@
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/sticky.js"></script>
-
+    <!-- Toast.js -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Superfish -->

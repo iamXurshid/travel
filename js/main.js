@@ -33,7 +33,11 @@
 
 	//Date Picker
 
-   $('#date-start, #date-end').datepicker();
+	$('#date-start, #date-end').datepicker({
+		format: 'dd/mm/yyyy', // Formatni o'zgartirish
+		autoclose: true, // Kalit bosilganda avtomatik yopilishi
+		todayHighlight: true // Bugungi sanani ajratib ko'rsatish
+	});
 
    [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
       new SelectFx(el);
